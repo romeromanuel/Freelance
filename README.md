@@ -1,2 +1,2 @@
 # Freelancer MR
-Proyecto Freelance MR
+Proyecto Freelancer MR
