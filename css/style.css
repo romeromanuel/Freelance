@@ -1,0 +1,228 @@
+:root {
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --oscuro: #212121;
+    --gris: #757575;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** Reset para REMS - 1rem = 10px **/
+    min-height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'krub',sans-serif;
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.6rem;
+}
+
+/** Globales **/
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 3rem auto;
+    padding: 3rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
+    box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.74);
+}
+img {
+    max-width: 100%;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+h2, h3 {
+    text-align: center;
+}
+h3 {
+    color: var(--secundario);
+    font-weight: 400;
+    font-size: 2.6rem;
+}
+p {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+/** Header **/
+.site-header {
+    background-color: #ffffff;
+}
+.site-header nav {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .site-header nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.site-header nav a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .site-header nav a {
+        margin-bottom: 0;
+    }
+}
+.site-header nav a:last-of-type {
+    margin-bottom: 0;
+}
+
+/** Hero **/
+.hero {
+    background-image: url(../img/hero.jpg);
+    height: 45rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, .6);
+}
+/*
+.hero::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}*/
+.contenedor-hero {
+    color: #ffffff;
+    /*position: relative;*/
+    z-index: 1;
+    text-align: center;
+}
+.contenedor-hero i {
+    font-size: 3.5rem;
+    color: var(--primario);
+}
+
+/** Botón **/
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: .5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover {
+    background-color: var(--primario);
+}
+/** Nuestros Servicios **/
+.contenedor-servicios {
+    margin-top: 4rem; 
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .contenedor-servicios {
+        display: flex;
+        justify-content: space-between;
+    }
+    .servicio {
+        flex: 0 0 calc(33.3% - 3rem);
+    }
+}
+.servicio p {
+    text-align: justify;
+    text-indent: 2.5rem;
+    
+}
+.iconos {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--primario);
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+/** Contacto **/
+form {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 3rem auto;
+}
+form legend {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primario);
+    margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    form {
+        max-width: 800px;
+    }
+    .contenedor-campos { 
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+    .campo {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label {
+    flex: 0 0 9rem;
+    padding-top: .5rem;
+    color: #ffffff;
+}
+.campo input {
+    flex: 1;
+    padding: 1rem;
+}
+.campo textarea {
+    flex: 1;
+    height: 10rem;
+}
+.campo input, .campo textarea {
+    min-width: 10rem;
+}
+.w-100 {
+    flex: 0 0 100%;
+}
+.enviar {
+    text-align: end;
+}
